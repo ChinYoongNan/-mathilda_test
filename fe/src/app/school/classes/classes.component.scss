@@ -1,0 +1,246 @@
+.title{
+    margin-top: 2%;
+    margin-left: 3%;
+    margin-bottom: 10px;
+}
+.row{
+    border: 2px dashed gray;
+    width: 98%;
+    height: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.body__container{
+    display: flex;
+    background-color: #ffffff;
+
+}
+
+.left__container{
+    width: 35%;
+    display: flex;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    justify-content: center;
+    padding: 1.25rem 0 ;
+    margin-right: 2rem;
+    padding-right: 1.8rem;
+}
+
+.side__titles{
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 0.6rem; */
+}
+
+.title__name{
+    padding: 0.6rem 0.1rem;
+    margin-bottom: 3cm;
+    margin-top: 0.5cm;
+}
+
+.title__name h3{
+    margin-bottom: 0.20rem;
+    text-align: center;
+    color: #000000;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+.title__name p{
+    text-align: center;
+    color: var(--shadow-color);
+    font-size: 0.75rem;
+}
+
+
+.progress__bar__container{
+    padding-top:0.6rem ;
+    /* height: 100%; */
+}
+.progress__bar__container ul .active{
+    background-color: var(--secondery-color);
+
+}
+
+
+#progressbar {
+    overflow: hidden;
+    color: #455A64;
+    padding-left: 0px;
+} 
+
+#progressbar li {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    list-style: none;
+    background: var(--shadow-color);
+    padding: 1.0rem 0.6rem;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: #000000;
+    margin-left:2rem ;
+    margin-bottom: 3cm;
+    margin-top: 0.5cm;
+}
+
+#progressbar #step1:before {
+    content: "1";
+    color: #fff;
+    text-align: center;
+}
+
+#progressbar #step2:before {
+    content: "2";
+    color: #fff;
+    text-align: center;
+}
+
+#progressbar #step3:before {
+    content: "3";
+    color: #fff;
+    text-align: center;
+}
+
+#progressbar li:before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #455A64;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0px;
+
+}
+
+/*ProgressBar connectors*/
+#progressbar li:after {
+    content: '';
+    width: 3px;
+    height: 66px;
+    background: #455A64;
+    position: absolute;
+    left: 58px;
+    top: 15px;
+    z-index: -1;
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: -50%;
+}
+
+#progressbar li:nth-child(2):after {
+    left: -50%;
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    position: absolute;
+    left: 50%;
+}
+
+#progressbar li:last-child:after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#progressbar li:first-child:after {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+/*Color number of the step and the connector before it*/
+#progressbar li.active:before, #progressbar li.active:after {
+    background: #651FFF;
+}
+
+.right__container{
+    width: 65%;
+    display: flex;
+    padding: 1.5rem 1.5rem;
+}
+.right__container fieldset{
+    width:100%;
+    border: none
+}
+.active__form{
+    display: none;
+}
+
+.sub__title__container{
+    padding: 1rem 0 1.2rem 0;
+    align-content: center;
+}
+.sub__title__container h3{
+    text-align: center;
+    margin: 0.4rem 0;
+}
+#icon {
+    overflow: hidden;
+    color: #455A64;
+    padding-left: 0px;
+} 
+
+#icon li {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    list-style: none;
+    background: var(--shadow-color);
+    border-radius: 50%;
+    font-size: 1.4rem;
+    color: #000000;
+}
+
+#icon #step1:before {
+    content: "1";
+    color: #fff;
+    text-align: center;
+}
+
+#icon #step2:before {
+    content: "2";
+    color: #fff;
+    text-align: center;
+}
+
+#icon #step3:before {
+    content: "3";
+    color: #fff;
+    text-align: center;
+}
+
+#icon li:before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #651FFF;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0px;
+
+}
+.input__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+}
+
+.input__container fieldset{
+    width:50%;
+    border: none   
+}
+

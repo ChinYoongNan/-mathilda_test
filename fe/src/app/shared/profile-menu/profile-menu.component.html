@@ -1,0 +1,5 @@
+<div style="min-width: 200px; max-width: 100%">
+  <button mat-menu-item *ngFor="let item of profileMenuItems" (click)="item.action()">
+    <mat-icon>{{ item.icon }}</mat-icon> {{ item.label }}
+  </button>
+</div>

@@ -1,0 +1,33 @@
+<mat-accordion [formGroup]="form" >
+    <ng-container *ngFor="let ruleData of ruleFormData; let i = index;">
+      <mat-expansion-panel >   
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Field Name : {{ruleData}}
+              </mat-panel-title>
+              <mat-panel-description *ngIf="this.ruleScores.controls[i]['controls']['ruleScoresOption'].value !=''">
+                <mat-icon color="accent">done</mat-icon>
+                <mat-icon (click)="cancelChange($event,i)">cancel</mat-icon>
+              </mat-panel-description>
+            </mat-expansion-panel-header>
+            <!-- <mat-tab-group style="display: flex;flex-direction: column;">
+              <mat-tab label="Entity Name" style="flex-direction: row;display: flex;"> -->
+                <mat-tab-group (selectedTabChange)="onTabChanged($event,i);">  
+                  <ng-container *ngFor="let data of formData; ">
+                      <mat-tab label="{{data}}">                          
+                          <div>    
+                            <mat-radio-group (change)="radioChange($event,i)" aria-label="Select an option" fxFlex="100" fxFlex.gt-sm="50%">
+                              <ng-container *ngFor="let rules of ruleScoreOption">
+                                <mat-radio-button value="{{rules.value}}">{{rules.label}}</mat-radio-button>
+                              </ng-container>
+                            </mat-radio-group>
+                          </div>
+                      </mat-tab>
+                    </ng-container>
+                <!-- </mat-tab-group>
+              </mat-tab> -->
+            </mat-tab-group>
+      </mat-expansion-panel> 
+    </ng-container>
+</mat-accordion>
+

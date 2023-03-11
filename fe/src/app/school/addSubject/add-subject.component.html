@@ -1,0 +1,17 @@
+<h1 mat-dialog-title>Create Subject</h1>
+<div mat-dialog-content >
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="row" fxFlexAlign="center" fxLayout="row wrap">
+      <div class="p-l-10 p-r-10" fxFlex="100">
+        <mat-form-field>
+          <mat-label>Subject Name</mat-label>
+          <input [formControl]="form.controls['name']" matInput placeholder="Name">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="pull-right">
+      <input type="button" value="Close"/>
+      <input type="submit" value="Next"/>
+    </div>
+  </form>
+</div>

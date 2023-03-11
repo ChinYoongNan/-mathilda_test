@@ -1,0 +1,48 @@
+<button
+  mat-icon-button
+  class="m-r-10"
+  [matMenuTriggerFor]="notification"
+>
+  <mat-icon>message</mat-icon>
+  <div class="notify" *ngIf="unreadNotiCount > 0">
+    <span class="heartbit"></span>
+    <span class="point"></span>
+  </div>
+</button>
+<mat-menu #notification="matMenu" class="mymegamenu">
+  <div class="mailbox">
+    <ul>
+      <li>
+        <div class="drop-title">Notifications</div>
+      </li>
+      <li>
+        <div class="message-center">
+        </div>
+      </li>
+      <li>
+        <a href="#" [routerLink]="['/user-management/user-profile']">
+          <div class="drop-bottom">Check all Notifications >></div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</mat-menu>
+<button
+  [matMenuTriggerFor]="profile"
+  mat-icon-button
+  class="m-r-5"
+  style="width: auto"
+>
+  <img
+    *ngIf="(user$ | async) && shortUsername == ''"
+    [src]="(user$ | async).logo"
+    alt="user"
+    class="profile-pic"
+  />
+  <div class="profile-avatar-header" *ngIf="shortUsername != ''">
+    {{ shortUsername }}
+  </div>
+</button>
+<mat-menu #profile="matMenu" class="mymapp-profile-menuegamenu">
+  <app-profile-menu></app-profile-menu>
+</mat-menu>

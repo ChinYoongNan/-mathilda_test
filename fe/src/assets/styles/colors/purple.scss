@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+/*Material Theme Colors*/
+
+$purple-app-primary: mat-palette($mat-purple, 600);
+$purple-app-accent: mat-palette($mat-indigo, A200, A100, A400);
+$purple-app-warn: mat-palette($mat-pink);
+// Create the theme object (a Sass map containing all of the palettes).
+$purple-app-theme: mat-light-theme($purple-app-primary, $purple-app-accent, $purple-app-warn);
+$themecolor:#8E24AA;
+$themecolor-alt: #7B1FA2;
+$white:#fff;
+#snav {
+    .mat-nav-list .mat-list-item {
+        .mat-list-item-content {
+            &:hover {
+                > a {
+                    color: $themecolor;
+                }
+            }
+        }
+        &.selected > .mat-list-item-content > a {
+            background: $themecolor-alt;
+            color: $white;
+        }
+    }
+}

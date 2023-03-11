@@ -1,0 +1,9 @@
+com:
+  caam:
+    mrs:
+       api: 
+         service: 
+           jasper:
+             report-location: reports
+             report-jndi: java:jdbc/mmrs
+             storage-location: file:/opt/mmrs/reports
